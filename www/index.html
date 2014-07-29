@@ -5,6 +5,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 <style type="text/css">
 body {
@@ -19,10 +20,38 @@ html, body, #map {
 </head>
 <body>
 <div id="map"></div>
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Itinerary</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="From" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="To" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Search</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    
+</div>
 <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+<script src="js/bootstrap.min.js"></script>
 <script>
 	var map = L.map('map').setView([52.04, -0.73], 12);
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+        {
 		maxZoom: 18			
 	}).addTo(map);
 	function onLocationFound(e) {
@@ -42,11 +71,20 @@ html, body, #map {
 	map.on('locationerror', onLocationError);
 
 		map.locate({setView: true, maxZoom: 16});
+		var popup = L.popup();
+
+
+
+map.on('click', onMapClick);
+		
+		
 </script>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+		
+	
 </body>
 </html>
