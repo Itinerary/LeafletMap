@@ -105,25 +105,43 @@ html, body, #map {
 <!-- Maps Javascript -->
 <script src="js/leaflet.js"></script> 
 <script>
-    var map = L.map('map').setView([50.505, 30.57], 12);
+    var map = L.map('map').setView([47.7437735, -117.42211], 12);
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18			
     }).addTo(map);
 
-    var myIcon = L.icon({
-        iconUrl: './images/restaurant.png',
-        iconRetinaUrl: './images/restaurant@2x.png',
+var seattle = L.latLng(47.7437735,-122.3358423),
+    spokane = L.latLng(47.6728404,-117.4121499),
+    bounds = L.latLngBounds(seattle, spokane);
+    map.fitBounds(bounds);
+
+var myIcon = L.icon({
+        iconUrl: './images/monument.png',
+        iconRetinaUrl: './images/monument@2x.png',
         iconSize: [25, 25],
         iconAnchor: [22, 94],
         popupAnchor: [-3, -76],
-        shadowUrl: './images/restaurant.png',
-        shadowRetinaUrl: './images/restaurant@2x.png',
+        shadowUrl: './images/monument.png',
+        shadowRetinaUrl: './images/monument@2x.png',
         shadowSize: [0, 0],
         shadowAnchor: [22, 94]
     });
 
-    L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
+    L.marker([47.620506, -122.349277], {icon: myIcon}).addTo(map);
 
+var myIcon = L.icon({
+        iconUrl: './images/attraction.png',
+        iconRetinaUrl: './images/attraction@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/attraction.png',
+        shadowRetinaUrl: './images/attraction@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.666705, -122.398068], {icon: myIcon}).addTo(map);
     //function onLocationFound(e) {
         //var radius = e.accuracy / 2;
 
