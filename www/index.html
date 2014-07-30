@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+
 
 <style type="text/css">
 body {
@@ -45,15 +48,49 @@ html, body, #map {
       </div>
     
 </div>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+<script src="js/leaflet.js"></script>
+<script src="js/leaflet-src.js"></script> 
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/leaflet.awesome-markers.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script stc="js/leaflet.awesome-markets.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>"
+
 <script>
-	var map = L.map('map').setView([52.04, -0.73], 12);
+	var map = L.map('map').setView([50.505, 30.57], 14);
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
         {
 		maxZoom: 18			
 	}).addTo(map);
+
+var myIcon = L.icon({
+    iconUrl: './images/restaurant.png',
+    iconRetinaUrl: './images/restaurant@2x.png',
+    iconSize: [25, 25],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowUrl: './images/restaurant.png',
+    shadowRetinaUrl: './images/restaurant@2x.png',
+    shadowSize: [30, 30],
+    shadowAnchor: [22, 94]
+});
+
+L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
+
+var greenIcon = L.icon({
+    iconUrl: 'images/restaurant.png',
+    shadowUrl: 'images/restaurant.png',
+
+    iconSize:     [38, 95], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+//L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+
 	function onLocationFound(e) {
 		var radius = e.accuracy / 2;
 
@@ -74,13 +111,10 @@ html, body, #map {
 		var popup = L.popup();
 
 
-
-map.on('click', onMapClick);
-		
 		
 </script>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <!--<script type="text/javascript" src="./js/phonegap.js"></script>-->
+        <script type="text/javascript" src="./js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>

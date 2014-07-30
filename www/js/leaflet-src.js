@@ -1043,8 +1043,8 @@ L.DomUtil = {
 		// makes animation smoother as it ensures HW accel is used. Firefox 13 doesn't care
 		// (same speed either way), Opera 12 doesn't support translate3d
 
-		var is3d = L.Browser.webkit3d,
-		    open = 'translate' + (is3d ? '3d' : '') + '(',
+			var is3d = L.Browser.webkit3d,
+		  	open = 'translate' + (is3d ? '3d' : '') + '(',
 		    close = (is3d ? ',0' : '') + ')';
 
 		return open + point.x + 'px,' + point.y + 'px' + close;
