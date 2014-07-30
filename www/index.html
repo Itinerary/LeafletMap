@@ -115,6 +115,21 @@ var seattle = L.latLng(47.7437735,-122.3358423),
     bounds = L.latLngBounds(seattle, spokane);
     map.fitBounds(bounds);
 
+//Seattle
+var myIcon = L.icon({
+        iconUrl: './images/marker-icon.png',
+        iconRetinaUrl: './images/marker-icon@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/marker-icon.png',
+        shadowRetinaUrl: './images/marker-icon@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.603569,-122.329453], {icon: myIcon}).addTo(map);
+//space needle
 var myIcon = L.icon({
         iconUrl: './images/monument.png',
         iconRetinaUrl: './images/monument@2x.png',
@@ -127,8 +142,8 @@ var myIcon = L.icon({
         shadowAnchor: [22, 94]
     });
 
-    L.marker([47.620506, -122.349277], {icon: myIcon}).addTo(map);
-
+    L.marker([47.619930,-122.348671], {icon: myIcon}).addTo(map);
+//Ballard Locks
 var myIcon = L.icon({
         iconUrl: './images/attraction.png',
         iconRetinaUrl: './images/attraction@2x.png',
@@ -142,6 +157,173 @@ var myIcon = L.icon({
     });
 
     L.marker([47.666705, -122.398068], {icon: myIcon}).addTo(map);
+
+//Seattle Acquarium
+var myIcon = L.icon({
+        iconUrl: './images/attraction.png',
+        iconRetinaUrl: './images/attraction@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/attraction.png',
+        shadowRetinaUrl: './images/attraction@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.60743, -122.320984], {icon: myIcon}).addTo(map);
+
+   //Luther Burbank Park
+var myIcon = L.icon({
+        iconUrl: './images/park.png',
+        iconRetinaUrl: './images/park@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/park.png',
+        shadowRetinaUrl: './images/park@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.59179, -122.22671], {icon: myIcon}).addTo(map);
+
+    //Belle Pastry
+var myIcon = L.icon({
+        iconUrl: './images/coffeeshop.png',
+        iconRetinaUrl: './images/coffeeshop@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/coffeeshop.png',
+        shadowRetinaUrl: './images/coffeeshop@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.61039, -122.203275], {icon: myIcon}).addTo(map);
+
+    //Tiger Mountain Hike
+var myIcon = L.icon({
+        iconUrl: './images/hike.png',
+        iconRetinaUrl: './images/hike@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/hike.png',
+        shadowRetinaUrl: './images/hike@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.4883311, -121.9466666], {icon: myIcon}).addTo(map);
+
+//Wild Horses Monument
+var myIcon = L.icon({
+        iconUrl: './images/hike.png',
+        iconRetinaUrl: './images/hike@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/hike.png',
+        shadowRetinaUrl: './images/hike@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([46.964416, -119.964331], {icon: myIcon}).addTo(map);
+
+
+//Grand Coulee Dam
+var myIcon = L.icon({
+        iconUrl: './images/attraction.png',
+        iconRetinaUrl: './images/attraction@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/attraction.png',
+        shadowRetinaUrl: './images/attraction@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.956297, -118.9817], {icon: myIcon}).addTo(map);
+
+//Palouse Falls
+var myIcon = L.icon({
+        iconUrl: './images/waterfall.png',
+        iconRetinaUrl: './images/waterfall@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/waterfall.png',
+        shadowRetinaUrl: './images/waterfall@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([46.6636105, -118.223611], {icon: myIcon}).addTo(map);
+
+//Sun Lakes Dry Falls
+var myIcon = L.icon({
+        iconUrl: './images/attraction.png',
+        iconRetinaUrl: './images/attraction@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/attraction.png',
+        shadowRetinaUrl: './images/attraction@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.597012, -119.395857], {icon: myIcon}).addTo(map);
+
+//Davenport Hotel
+var myIcon = L.icon({
+        iconUrl: './images/hotel.png',
+        iconRetinaUrl: './images/hotel@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/hotel.png',
+        shadowRetinaUrl: './images/hotel@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.656908, -117.424455], {icon: myIcon}).addTo(map);
+
+//Clinkerdagger Restaurant
+var myIcon = L.icon({
+        iconUrl: './images/restaurant.png',
+        iconRetinaUrl: './images/restaurant@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: './images/restaurant.png',
+        shadowRetinaUrl: './images/restaurant@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+    L.marker([47.664994, -117.42211], {icon: myIcon}).addTo(map);
+
+//Spokane
+var myIcon = L.icon({
+        iconUrl: './images/marker-icon.png',
+        iconRetinaUrl: './images/marker-icon@2x.png',
+        iconSize: [25, 25],
+        iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+        shadowUrl: './images/marker-icon.png',
+        shadowRetinaUrl: './images/marker-icon@2x.png',
+        shadowSize: [0, 0],
+        shadowAnchor: [22, 94]
+    });
+
+   L.marker([47.6728404,-117.4121499], {icon: myIcon}).addTo(map);
+
     //function onLocationFound(e) {
         //var radius = e.accuracy / 2;
 
