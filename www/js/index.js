@@ -45,5 +45,26 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+	
+	hidePlaces: function (id) {
+                if(document.getElementById(id).style.display=='none'){
+                    document.getElementById(id).style.display='block';
+                }
+                else {
+                    document.getElementById(id).style.display = 'none';
+					}
+            },
+	
+	onClickTab: function (ele) {
+				var a = ele;
+				var li = $(a).parent();
+				$('ulPlaces').find('li').each(function(){ 
+					var current = $(this);
+					$(current).removeClass( "active" );
+				});
+		
+		
+				$(li).addClass( "active" );
+            }
 };

@@ -66,6 +66,8 @@ html, body, #map {
 
 
 
+
+
 <!--Bottom Navigation bar-->
     <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
   <div class="container">
@@ -80,26 +82,36 @@ html, body, #map {
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active" ><a href="#" onclick="hidePlaces()"id = "Plan"><span class="glyphicon glyphicon-pushpin" ></span> Places</a></li>
+        <li class="active" ><a href="#" onclick="app.hidePlaces('places')" id = "Plan"><span class="glyphicon glyphicon-pushpin" ></span> Places</a></li>
         <li class="active"><a href="#"><span class="glyphicon glyphicon-road"></span> Trips</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </div>
 
-<!--Places Navigation bar-->
-<div class= "col-xs-6 col-md-4" id="places" >
- <ul class="nav nav-pills nav-stacked">
-    <li class="active"><a href="#">Attractions</a></li>
-    <li><a href="#">Accommodation</a></li>
-    <li><a href="#">Entertainment</a></li>
-    <li><a href="#">Food</a></li>
-    <li><a href="#">History</a></li>
-    <li><a href="#">Nature</a></li>
-    <li><a href="#">Shopping</a></li>
-    <li><a href="#">Sports</a></li>
-</ul>
+<!-- Places navbar -->
+<div class= "col-xs-6 col-md-2" id="places" style="top:100px; left:10px; position:fixed;">
+<div class="navbar navbar-inverse" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="#">Places</a>
+   </div>
+   <div>
+      <ul id="ulPlaces" class="nav nav-pills nav-stacked">
+	  
+    <li class="active"><a href="#"  onclick="app.onClickTab($(this))">Attractions</a></li>
+    <li><a href="#"  onclick="app.onClickTab($(this))">Accommodation</a></li>
+    <li><a href="#"  onclick="app.onClickTab($(this))">Entertainment</a></li>
+    <li><a href="#"  onclick="app.onClickTab($(this))">Food</a></li>
+    <li><a href="#"  onclick="app.onClickTab($(this))">History</a></li>
+    <li><a href="#"  onclick="app.onClickTab($(this))">Nature</a></li>
+    <li><a href="#"  onclick="app.onClickTab($(this))">Shopping</a></li>
+    <li><a href="#"  onclick="app.onClickTab($(this))">Sports</a></li>
+      </ul>
+   </div>
 </div>
+</div>
+
+
 <div id="map"></div>
 
 <!-- Maps Javascript -->
@@ -1286,16 +1298,7 @@ var myIcon = L.icon({
         <script type="text/javascript" src="js/index.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src = "js/bootstrap.min.js"></script>
-        <script>
-            function hidePlaces() {
-                if(document.getElementById('places').style.display=='none'){
-                    document.getElementById("places").style.display='block';
-                }
-                else {
-                    document.getElementById('places').style.display = 'none'}
-
-            }
-        </script>
+       
         <script>
             $(document).ready(function(){
                 $("plan").click(function(){
